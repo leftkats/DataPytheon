@@ -33,7 +33,7 @@ Think of it as your **data prep toolbox** — one line of code away from clean, 
 ---
 
 ## :file_folder: Project Structure
-
+```text
 DataPytheon/
 │
 ├── recipes/                    # Static datasets
@@ -44,4 +44,4 @@ DataPytheon/
 │
 ├── tests/                      # Basic unit tests for scripts
 │   └── test_titanic.py
-
+```
