@@ -1,0 +1,22 @@
+[run]
+# Only measure coverage for these source directories
+source = recipes, syncers
+
+[report]
+# Omit tests, docs, markdown, config, and common non-code files from coverage report
+omit =
+    *.md
+    *.txt
+    *.rst
+    *.yml
+    *.yaml
+    *.ini
+    setup.py
+    LICENSE
+    README*
+    CONTRIBUTING*
+    .gitignore
+    .coveragerc
+    __init__.py
+    pytest.ini
+    requirements.txt

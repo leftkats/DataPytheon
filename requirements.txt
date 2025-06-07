@@ -1,0 +1,17 @@
+# Core data stack
+pandas>=1.5
+numpy>=1.22
+seaborn==0.13.2
+
+# API requests
+requests>=2.31
+
+# Testing
+pytest>=7.4
+pytest-cov>=4.1
+
+# Linting & formatting
+ruff>=0.4.4
+
+# Pre-commit hooks
+pre-commit>=3.6

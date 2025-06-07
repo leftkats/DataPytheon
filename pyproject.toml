@@ -1,0 +1,4 @@
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+select = ["E", "F", "I"]  # Error, Pyflakes, and Import sort
