@@ -14,18 +14,26 @@ def test_load_titanic_data_returns_dataframe():
         "survived",
         "pclass",
         "sex",
-        "age",
         "sibsp",
         "parch",
         "fare",
         "embarked",
+        "class",
+        "who",
+        "adult_male",
+        "alone"
     }
+    
     missing_cols = expected_cols - set(df.columns)
+    print(f"Missing columns: {missing_cols}")
     assert not missing_cols, f"Missing expected columns: {missing_cols}"
 
-    # Check no critical nulls remain in 'age' or 'embarked'
-    assert df["age"].isnull().sum() == 0, "'age' column should have no nulls"
-    assert df["embarked"].isnull().sum() == 0, "'embarked' column should have no nulls"
+    # Check that 'embarked' column has more than one categorical values
+    assert df["embarked"].nunique() > 1, "'embarked' column should have more than one unique value"
+
+    # Check that no null values exist in the DataFrame
+    assert df.isnull().sum().sum() == 0, "DataFrame should not contain any null values"
 
     # Check that some rows exist
     assert len(df) > 0, "DataFrame should not be empty"
+    

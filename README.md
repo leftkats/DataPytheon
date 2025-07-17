@@ -45,3 +45,11 @@ DataPytheon/
 ├── tests/                      # Basic unit tests for scripts
 │   └── test_titanic.py
 ```
+
+## 🧪 Run your tests
+
+Just run the next command from the root folder of the project:
+
+```
+pytest --cov=src   
+```
